@@ -1,0 +1,12 @@
+//
+//  Desc: Page-specific styles for the landing page
+//
+//  Notes:
+//  - If you create any styles in this file that will be used elsewhere, those styles should be moved to global.scss to be shared across files.
+//  – Responsive styles should be written in or near the styles they are overriding for easy reference
+//
+@import "nav-menu/style";
+@import "hero/style";
+@import "message/style";
+@import "demo/style";
+@import "footer/style";

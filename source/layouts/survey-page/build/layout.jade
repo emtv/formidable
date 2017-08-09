@@ -1,0 +1,39 @@
+.survey-build
+	#field-1.survey-fields.field-title
+		h3 What kind of restaurants do you prefer?
+		p.txt-small A set of questions exploring qualities of your favorite restaurants
+	.separator
+	
+	#field-2.survey-fields.field-name
+		p.txt-fieldTitle What is your name?
+		input(type="text")
+		p.txt-help Your full name please
+	.separator
+	
+	#field-3.survey-fields.field-radio
+		p.txt-fieldTitle What is the single most important quality of a restaurant?
+		
+		.content-radio
+			.radio-item
+				input(type="radio" name="quality-restaurant")
+				label How loud or quiet it is
+
+			.radio-item
+				input(type="radio" name="quality-restaurant")
+				label(for="") The drink selection
+			
+			.radio-item
+				input(type="radio" name="quality-restaurant")
+				label(for="") The quality of the food
+			
+			.radio-item
+				input(type="radio" name="quality-restaurant")
+				label The dessert
+
+			.radio-item.field-other_main
+				.field-other_radio
+					input(type="radio" name="quality-restaurant" checked)
+					label(for="") Other:
+				.field-other_input
+					input(type="text")
+		p.txt-help Think hard! you can only choose one.

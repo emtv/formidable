@@ -1,0 +1,45 @@
+.survey-menu {
+	position: relative;
+	background: #fff !important;
+	width: 100%;
+	margin: 0;
+	.login {
+		display: flex;
+		align-items: center;
+		height: 35.2px;
+	    display: flex;
+	    align-items: center;
+		float: right;
+	a {
+		color: $gray;
+		font-size: 14pt;
+		font-family: $Roboto;
+		text-transform: uppercase;
+	}
+
+	.nav-mobile {
+		display: none;
+	}
+}
+}
+
+@media only screen and (max-width: 768px) {
+	
+	.survey-menu {
+		border-bottom: solid $lightGray 1px;
+		padding-bottom: 30px;
+	}
+
+
+	.login {
+		display: none !important;
+	}
+
+	.nav-mobile {
+		display: block;
+		float: right;
+		margin-top: 5px;
+	}
+
+
+}

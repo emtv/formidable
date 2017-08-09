@@ -1,0 +1,30 @@
+.link-footer {
+    display: flex;
+    justify-content: space-around;
+	margin: 0 auto;
+    padding: 5%;
+    width: 45%;
+    @include respond-to($break_mobile) {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }       
+
+    a {
+    	font-family: $Roboto;
+    	color: $turquoise_2;
+    	font-size: 14pt;
+    	
+    	&:focus {
+    		color: $darkTurquoise
+    	}
+        @include respond-to($break_mobile) {
+            width: 100%;
+            text-align: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }           
+
+    }
+}

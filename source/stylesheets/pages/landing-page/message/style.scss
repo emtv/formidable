@@ -1,0 +1,51 @@
+.message-content {
+	margin: 0 auto;
+	padding-top: 12%;
+	padding-right: 7%;
+	padding-bottom: 12%;
+	padding-left: 7%;
+	text-align: center;
+	width: 70%;
+	@include respond-to($break_mobile) {
+		width: 100%;
+		padding-top: 60%;
+		padding-bottom: 60%;
+	}	
+}
+
+._content {
+	&-top {
+		color: $gray;
+		text-transform: uppercase;
+		font-size: 12pt;
+		font-family: $Roboto;
+		font-weight: 500;
+		@include respond-to($break_mobile) {
+			font-size: 14pt;
+		}		
+	}
+	
+	&-body {
+		font-family: $Playfair;
+		line-height: 1.2;
+		color: $black;
+		font-size: 27pt;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		@include respond-to($break_mobile) {
+			font-size: 23pt;
+		}
+
+	}
+
+	&-credits {
+		color: $gray;
+		text-align: right;
+		font-size: 18pt;
+		padding-right: 10px;
+		@include respond-to($break_mobile) {
+			text-align: center;
+			padding-right: 0;
+		}		
+	}
+}

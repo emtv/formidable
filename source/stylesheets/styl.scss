@@ -1,0 +1,22 @@
+/*
+Theme Name:		Formidable
+Description: 	Pretty Form
+Author:			EdgardoT
+Author URI:		https://edgardo.tupino.com
+Template:		formidable-theme
+Version:		1.0.0
+License: 		GNU General Public License v2 or later
+License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
+Tags:			e-commerce, light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+*/
+/* =Formidable styles starts here-------------------------- */
+$h1Color: green;
+
+h1 {
+	color: $h1Color;
+	font-size: 3em;
+}
+
+.classo {
+	display: flex;
+}

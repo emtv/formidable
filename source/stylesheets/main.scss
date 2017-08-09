@@ -1,0 +1,109 @@
+//
+//  Desc: Main Sass file
+//
+//  Notes:
+//  - This file is used to import other components that will eventually compile to one CSS file
+//  - The order matters because of override styles (e.g. responsive.scss is loaded last)
+//  - As you write your styles, feel free to add them to an existing file or create a new one (if you create a new file, be sure to include it here)
+//  - Please feel free to comment any code to help explain your solution
+//  - Try to keep nesting styles at 3 levels
+//  - If you're new to Sass, you can reference their documentation here: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
+//
+
+//JUST ONCE MEDIAQUERY
+$break_mobile : '(max-width: 768px)';
+
+@import "reset";
+@import "normalize";
+@import "fonts";
+@import "helpers";
+@import "global";
+@import "pages/landing-page/landing";
+@import "pages/survey-page/survey";
+
+
+// //GUIDELINE
+// section {
+// 	border: solid orange 1px;
+// }
+// //GUIDELINE
+
+h1 {
+	@include heading($lnd_h1...);
+	@include respond-to($break_mobile) {
+		@include heading($Playfair, 26pt, $black);
+	}
+}
+
+h2 {
+	@include heading($Roboto, 24pt, $black);
+	@include respond-to($break_mobile) {
+		@include heading($Roboto, 20pt, $black);
+	}	
+}
+
+h3 {
+	@include heading($Roboto, 22pt, $black);
+	@include respond-to($break_mobile) {
+		@include heading($Roboto, 18pt, $black);
+	}	
+}
+
+h4 {
+	@include heading($Roboto, 18pt, $gray);
+	@include respond-to($break_mobile) {
+		@include heading($Roboto, 16pt, $gray);
+	}		
+}
+
+p {
+	font-family: $Roboto;
+}
+
+input[type="text"],
+select {
+	padding-top:  10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	border: solid 1px $lightGray
+}
+
+input[type="text"]:hover {
+	border: solid 1px $gray;
+}
+
+input[type="text"]:blur {
+	border: solid 1px $gray;
+}
+
+input[type="text"]:focus {
+	border: solid 1px $turquoise_2;
+}
+
+input[type="text"] {
+
+	&:-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  padding-left: 20px;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+	  padding-left: 20px;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+	  padding-left: 20px;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+	  padding-left: 20px;
+	}
+}
+
+.site-wrapper {
+	overflow-x: hidden;
+}
+
+.row {
+	margin: 0 !important;
+}
+
+
+
+

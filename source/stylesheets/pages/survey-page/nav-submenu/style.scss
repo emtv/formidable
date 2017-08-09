@@ -1,0 +1,48 @@
+.nav-submenu {
+	border-top: solid $lightGray 1px;
+	border-bottom: solid $lightGray 1px;
+
+	.container {
+		width: 100% !important;
+		margin: 0;
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+
+	@include respond-to($break_mobile) {
+		display: none;
+	}
+}
+
+
+.nav-li {
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: inline-block;
+	
+	a {
+		text-transform: uppercase;
+		font-weight: bold;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.first-li {
+	margin-left: 0;
+}
+
+.current {
+	border-bottom: solid $black 3px;
+	a {
+		color: $black;
+	}
+}
+
+.active > a  { color: $black; }
+
+.off > a { color: $gray !important; }
+

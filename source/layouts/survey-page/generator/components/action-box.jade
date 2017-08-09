@@ -1,0 +1,30 @@
+#field_add.survey-actionBox
+	.survey-background
+	.content-singleLine
+		
+		.singleLine-item
+			.col-lg-2.col-md-2.col-sm-2.col-xs-12
+				label(for="queston-title") Question Title
+			.col-lg-8.col-md-8.col-sm-8.col-xs-12
+				input(type="text" value="Describe the qualities of your favorite restaurant")
+		
+		.singleLine-item
+			.col-lg-2.col-md-2.col-sm-2.col-xs-12
+				label(for="help-text") Help Text
+			.col-lg-8.col-md-8.col-sm-8.col-xs-12
+				input(type="text" value="Be as descriptive as possible")
+		
+		.singleLine-item
+			.col-lg-2.col-md-2.col-sm-2.col-xs-12
+				label(for="question-type") Question Type
+			.col-lg-8.col-md-8.col-sm-8.col-xs-12
+				select(name="question-type") 
+					option(selected disabled hidden) Select
+					option Single Text
+					option Parragraph
+					option Checkboxes
+					option Multiple Choice
+			
+		.singleLine-item
+			._item-btn.col-sm-8.col-sm-offset-2
+				button.btn-save(value="save") Save

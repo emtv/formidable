@@ -1,0 +1,49 @@
+.survey-optionBox {
+	background: #fff;
+	border: dotted 2px $lightGray;
+	padding-top: 50px;
+	padding-right: 20px;
+	padding-bottom: 50px;
+	padding-left: 20px;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+.option {
+	&-title {
+		
+		margin-bottom: 40px;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $gray;
+	}
+
+	&-content {
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+ 	.option-content {
+ 		display: flex;
+ 		flex-wrap: wrap;
+ 	}
+
+ 	.option-title {
+ 		font-size: 15pt;
+ 	}
+
+	.btn-action {
+		width: 100%;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.survey-optionBox {
+		margin-top: 20%;
+	}
+
+}

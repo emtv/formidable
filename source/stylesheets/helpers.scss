@@ -1,0 +1,99 @@
+//
+//  Desc: File used to store global helper assets
+//
+//  Notes:
+//  - All variables, mixins, or functions for this exercise should live here
+//
+
+
+
+//==================
+//BRAND COLORS
+//==================
+
+//DEMO VAR
+$h1Color: green;
+
+$black: #000000;
+$darkGray: #4A4A4A;
+$gray: #9B9B9B;
+$lightGray: #E9E7E7;
+$background: #F9F9F9;
+
+$turquoise: #9B9B9B;
+$lightTurquoise: #6ECAE7;
+$darkTurquoise: #3EA0C0;
+
+$redError: #EC3249;
+
+//Landing Colors
+$turquoise_2: #4ABDE2;
+$lightTurquoise_2: #B3E3F3;
+
+
+//==================
+//MIXINS FOR MEDIAQUERYS
+//==================
+
+@mixin respond-to($media) {
+	@media only screen and #{$media} {
+		@content;
+	}
+}
+
+
+//==================
+//MIXIN RETINA
+//==================
+
+
+//==================
+//MIXINS STYLES
+//==================
+
+$lnd_h1: ($Playfair, 36pt, $black);
+
+@mixin heading($font-family, $font-size, $color ) {
+	font-family: $font-family;
+	font-size: $font-size;
+	color: $color;
+}
+
+@mixin button($btn_bg, $btn_colorBorder, $btn_color) {
+	background: $btn_bg;
+	border: solid 2px $btn_colorBorder;
+	border-radius: 20px;
+	color: $btn_color;
+	padding: 10px 40px;	
+	text-transform: uppercase;
+}
+
+@mixin btn-action_mobile ($btn-padding_top, $btn-padding_right, $btn-padding_bottom, $btn-padding_left) {
+	padding-top: $btn-padding_top ;
+	padding-right: $btn-padding_right ;
+	padding-bottom: $btn-padding_bottom;
+	padding-left: $btn-padding_left;
+}
+
+@mixin btn_singleLine($btn_s-bgsize, $btn_s-width, $btn_s-height){
+	background-repeat: no-repeat;
+	background-size: $btn_s-bgsize;
+	display: inline-block;
+	width: $btn_s-width;
+	height: $btn_s-height;
+	margin-left: 9px;
+	content: "";	
+}
+
+// @mixin buton_status() {
+// 	text-decoration: none;
+// 	background: #fff;
+// 	color: $turquoise_2;
+// }
+
+//==================
+//COMPONENTS
+//==================
+
+@import "components/buttons/style";
+

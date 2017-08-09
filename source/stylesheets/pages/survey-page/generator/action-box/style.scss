@@ -1,0 +1,104 @@
+.survey-actionBox {
+	background: $background;
+	padding: 5%;
+	position: relative;
+}
+
+.survey-background {
+	position: absolute;
+    height: 100%;
+    top: 0;
+    background: $background;
+    margin-left: -8%;
+    width: 107%;
+}
+
+.content-singleLine {
+	display: flex;
+	flex-direction: column;
+
+	label {
+		color: $gray;
+		font-weight: bold;
+		text-transform: uppercase;
+	}	
+}
+
+.singleLine-item {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+
+	input, select {
+		width: 100%;
+	}
+
+	@include respond-to($break_mobile) {
+		flex-wrap: wrap;
+	}
+}
+
+select > option:nth-child(1) {
+	color: red;
+}
+
+option {
+	background: #fff !important;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 1.5;
+}
+
+option:hover {
+	background: #fff !important;
+	color: red !important;
+}
+
+option:checked {
+	background: $background !important;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.singleLine-item > div > label {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.field-other_input {
+		width: 100%;
+
+		input[type="text"] {
+			margin-top: 30px;
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
+	._item-btn {
+		width: 100% !important;
+
+		button {
+			width: 100%;
+		}
+	}
+
+	.survey-actionBox  {
+		position: relative;
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+    	padding-bottom: 10%;
+	}
+
+	.survey-background {
+		width: 100%;
+		height: 100%;
+		background: $background;
+		position: absolute;
+		margin-left: -20%;
+		width: 130%;
+	}
+
+}

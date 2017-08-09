@@ -1,0 +1,10 @@
+doctype html
+html(lang='en-us')
+	include ./components/head/head
+	body
+		.main
+			include ./survey-page/nav-menu/layout
+			include ./survey-page/nav-submenu/layout
+			.container.survey-container
+				include ./survey-page/build/layout 
+				include ./survey-page/generator/layout 

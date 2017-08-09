@@ -1,0 +1,79 @@
+.btn {
+
+	&-regular {
+		@include button($turquoise_2, #fff, #fff);
+
+		&:hover {
+			text-decoration: none;
+			background: #fff;
+			color: $turquoise_2;
+		}
+
+		&:focus {
+			// text-decoration: none;
+			// background: #fff;
+			// color: $turquoise_2;
+			opacity: .7;
+		}
+	}
+
+	&-save {
+		@include button($turquoise_2, $turquoise_2, #fff);
+		/*MISC*/
+		text-transform: uppercase;	
+	}
+
+	
+	&-action {
+	    background: #fff;
+	    border: solid 2px #4ABDE2;
+	    border-radius: 30px;
+	    color: #4ABDE2;
+	    padding: 0 18px;
+	    text-transform: uppercase;
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	    width: 20%;
+	    height: 45px;	
+		
+	}
+
+
+	&-singleLine:after {
+		background-image: url("../images/pngs/singleLine-regular.png");
+		@include btn_singleLine(40px 15px, 40px, 15px);
+	}
+
+	&-parragraph:after {
+		background-image: url("../images/pngs/paragraph-regular.png");
+		@include btn_singleLine(15px 20px, 20px, 16px);
+	}
+
+	&-checkBox:after {	
+		background-image: url("../images/pngs/checkboxes-regular.png");
+		@include btn_singleLine(25px 20px, 25px, 20px);
+	}
+
+	&-multipleChoice:after {
+		background-image: url("../images/pngs/multiple-regular.png");
+		@include btn_singleLine(25px 25px, 25px, 25px);
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+
+	.btn {
+
+		&-singleLine { @include btn-action_mobile (0, 50px, 0, 50px) }
+
+		&-parragraph {@include btn-action_mobile (0, 50px, 0, 50px) }
+
+		&-checkBox { @include btn-action_mobile (0, 50px, 0, 50px) }
+
+		&-multipleChoice { @include btn-action_mobile (0, 35px, 0, 35px) }
+
+	}
+
+}
